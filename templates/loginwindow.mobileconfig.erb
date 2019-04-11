@@ -1,71 +1,185 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-    <dict>
-        <key>PayloadContent</key>
-        <array>
-            <dict>
-                <key>PayloadContent</key>
-                <dict>
-                    <key>com.apple.loginwindow</key>
-                    <dict>
-                        <key>Forced</key>
-                        <array>
-                            <dict>
-                                <key>mcx_preference_settings</key>
-                                <dict>
-                                    <key>GuestEnabled</key>
-                                    <<%= @guest_enabled %>/>
-                                    <key>showInputMenu</key>
-                                    <<%= @show_input_menu %>/>
-                                    <key>LoginwindowText</key>
-                                    <string><%= @loginwindow_text %></string>
-                                    <key>SHOWFULLNAME</key>
-                                    <<%= @show_fullname %>/>
-                                    <key>HideLocalUsers</key>
-                                    <<%= @hide_local_users %>/>
-                                    <key>HideMobileAccounts</key>
-                                    <<%= @hide_mobile_accounts %>/>
-                                    <key>IncludeNetworkUser</key>
-                                    <<%= @include_network_user %>/>
-                                    <key>HideAdminUsers</key>
-                                    <<%= @hide_admin_users %>/>
-                                    <key>DisableConsoleAccess</key>
-                                    <<%= @disable_console_access %>/>
-                                </dict>
-                            </dict>
-                        </array>
-                    </dict>
-                </dict>
-                <key>PayloadEnabled</key>
-                <true/>
-                <key>PayloadIdentifier</key>
-                <string><%= @profile_identifier_prefix %>.loginwindow</string>
-                <key>PayloadType</key>
-                <string>com.apple.ManagedClient.preferences</string>
-                <key>PayloadUUID</key>
-                <string>c36f9206-a807-4f91-a87c-7da9aec211e2</string>
-                <key>PayloadVersion</key>
-                <integer>1</integer>
-            </dict>
-        </array>
-        <key>PayloadDescription</key>
-        <string>LoginWindow Settings</string>
+  <dict>
+    <key>PayloadContent</key>
+    <array>
+      <dict>
+        <key>AutoLogOutDelay</key>
+        <integer><%= @auto_logout_delay %></integer>
+        <key>MultipleSessionEnabled</key>
+        <<%= @fast_user_switching_enabled %>/>
         <key>PayloadDisplayName</key>
-        <string>LoginWindow Settings</string>
-        <key>PayloadIdentifier</key>
-        <string><%= @profile_identifier_prefix %>.loginwindow</string>
-        <key>PayloadOrganization</key>
-        <string><%= @profile_payload_org %></string>
-        <key>PayloadRemovalDisallowed</key>
+        <string>Login Window:  Global Preferences</string>
+        <key>PayloadEnabled</key>
         <true/>
-        <key>PayloadScope</key>
-        <string>System</string>
+        <key>PayloadIdentifier</key>
+        <string><%= @profile_identifier_prefix %>.loginwindow.84364940-3884-0137-bb47-784f43519bbc.GlobalPreferences</string>
         <key>PayloadType</key>
-        <string>Configuration</string>
+        <string>.GlobalPreferences</string>
         <key>PayloadUUID</key>
-        <string>439f0d0d-46a1-4f97-ade0-5066a57e74e7</string>
+        <string>f7699c43-0682-83c8-11a0-ccc0dd8b9435</string>
         <key>PayloadVersion</key>
         <integer>1</integer>
-    </dict>
+      </dict>
+      <dict>
+        <key>PayloadDisplayName</key>
+        <string>Login Window</string>
+        <key>PayloadEnabled</key>
+        <true/>
+        <key>PayloadIdentifier</key>
+        <string><%= @profile_identifier_prefix %>.loginwindow.84364940-3884-0137-bb47-784f43519bbc.managed</string>
+        <key>PayloadType</key>
+        <string>com.apple.SetupAssistant.managed</string>
+        <key>PayloadUUID</key>
+        <string>36bcae02-d69a-9e4b-1835-ae86ddd12e26</string>
+        <key>PayloadVersion</key>
+        <integer>1</integer>
+        <key>SkipAppearance</key>
+        <<%= @skip_appearance_setup %>/>
+        <key>SkipCloudSetup</key>
+        <<%= @skip_cloud_setup %>/>
+        <key>SkipPrivacySetup</key>
+        <<%= @skip_privacy_setup %>/>
+        <key>SkipSiriSetup</key>
+        <<%= @skip_siri_setup %>/>
+        <key>SkipTrueTone</key>
+        <<%= @skip_truetone_setup %>/>
+        <key>SkipiCloudStorageSetup</key>
+        <<%= @skip_iCloud_storage_setup %>/>
+      </dict>
+      <dict>
+        <key>PayloadDisplayName</key>
+        <string>Login Window:  Screen Saver Preferences</string>
+        <key>PayloadEnabled</key>
+        <true/>
+        <key>PayloadIdentifier</key>
+        <string><%= @profile_identifier_prefix %>.loginwindow.84364940-3884-0137-bb47-784f43519bbc.screensaver</string>
+        <key>PayloadType</key>
+        <string>com.apple.screensaver</string>
+        <key>PayloadUUID</key>
+        <string>9ac225ad-e3c4-7147-cc80-acfe8d34c28b</string>
+        <key>PayloadVersion</key>
+        <integer>1</integer>
+        <key>idleTime</key>
+        <integer><%= @idle_time %></integer>
+        <key>loginWindowIdleTime</key>
+        <integer><%= @login_window_idle_time %></integer>
+      </dict>
+      <dict>
+        <key>DisableGuestAccount</key>
+        <<%= @guest_disbled %>/>
+        <key>EnableGuestAccount</key>
+        <<%= @guest_enabled %>/>
+        <key>PayloadDisplayName</key>
+        <string>Login Window:  MCX Preferences</string>
+        <key>PayloadEnabled</key>
+        <true/>
+        <key>PayloadIdentifier</key>
+        <string><%= @profile_identifier_prefix %>.loginwindow.84364940-3884-0137-bb47-784f43519bbc.MCX</string>
+        <key>PayloadType</key>
+        <string>com.apple.MCX</string>
+        <key>PayloadUUID</key>
+        <string>9577d72c-a9bf-0794-fe8b-8224fe3bdf15</string>
+        <key>PayloadVersion</key>
+        <integer>1</integer>
+      </dict>
+      <dict>
+        <key>AdminMayDisableMCX</key>
+        <<%= @admin_may_disable_MCX %>/>
+        <key>AllowList</key>
+        <array/>
+        <key>AlwaysShowWorkgroupDialog</key>
+        <false/>
+        <key>CombineUserWorkgroups</key>
+        <true/>
+        <key>DenyList</key>
+        <array/>
+        <key>DisableConsoleAccess</key>
+        <<%= @disable_console_access %>/>
+        <key>EnableExternalAccounts</key>
+        <<%= @external_accounts_enabled %>/>
+        <key>FlattenUserWorkgroups</key>
+        <false/>
+        <key>HideAdminUsers</key>
+        <<%= @hide_admin_users %>/>
+        <key>HideLocalUsers</key>
+        <<%= @hide_local_users %>/>
+        <key>HideMobileAccounts</key>
+        <<%= @hide_mobile_accounts %>/>
+        <key>IncludeNetworkUser</key>
+        <<%= @include_network_user %>/>
+        <key>LocalUserLoginEnabled</key>
+        <<%= @local_user_login_enabled %>/>
+        <key>LocalUsersHaveWorkgroups</key>
+        <false/>
+        <key>LoginwindowText</key>
+        <string><%= @loginwindow_text %></string>
+        <key>PayloadDisplayName</key>
+        <string>Login Window</string>
+        <key>PayloadEnabled</key>
+        <true/>
+        <key>PayloadIdentifier</key>
+        <string><%= @profile_identifier_prefix %>.loginwindow.84364940-3884-0137-bb47-784f43519bbc.loginwindow</string>
+        <key>PayloadType</key>
+        <string>com.apple.loginwindow</string>
+        <key>PayloadUUID</key>
+        <string>0d340d38-db49-252a-36e8-d71df990ffa5</string>
+        <key>PayloadVersion</key>
+        <integer>1</integer>
+        <key>RestartDisabled</key>
+        <<%= @restart_button_disabled %>/>
+        <key>RetriesUntilHint</key>
+        <integer>3</integer>
+        <key>SHOWFULLNAME</key>
+        <<%= @show_fullname %>/>
+        <key>SHOWOTHERUSERS_MANAGED</key>
+        <<%= @show_other_users_managed %>/>
+        <key>ShutDownDisabled</key>
+        <<%= @shutdown_button_disabled %>/>
+        <key>SleepDisabled</key>
+        <<%= @sleep_button_disabled %>/>
+        <key>com.apple.login.mcx.DisableAutoLoginClient</key>
+        <<%= @disable_auto_login %>/>
+      </dict>
+      <dict>
+        <key>PayloadDisplayName</key>
+        <string>Login Window:  Scripts</string>
+        <key>PayloadEnabled</key>
+        <true/>
+        <key>PayloadIdentifier</key>
+        <string><%= @profile_identifier_prefix %>.loginwindow.84364940-3884-0137-bb47-784f43519bbc.mcxloginscripts</string>
+        <key>PayloadType</key>
+        <string>com.apple.mcxloginscripts</string>
+        <key>PayloadUUID</key>
+        <string>b436c604-1879-f6d9-703a-91c8a7a3deb1</string>
+        <key>PayloadVersion</key>
+        <integer>1</integer>
+        <key>skipLoginHook</key>
+        <<%= @skip_login_hook %>/>
+        <key>skipLogoutHook</key>
+        <<%= @skip_logout_hook %>/>
+      </dict>
+    </array>
+    <key>PayloadDescription</key>
+    <string>Login window settings</string>
+    <key>PayloadDisplayName</key>
+    <string>Settings for Devices</string>
+    <key>PayloadEnabled</key>
+    <true/>
+    <key>PayloadIdentifier</key>
+    <string><%= @profile_identifier_prefix %></string>
+    <key>PayloadOrganization</key>
+    <string><%= @profile_payload_org %></string>
+    <key>PayloadRemovalDisallowed</key>
+    <<%= @payload_removal_disallowed %>/>
+    <key>PayloadScope</key>
+    <string>System</string>
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadUUID</key>
+    <string>32cfff00-3884-0137-bb46-784f43519bbc</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+  </dict>
 </plist>
