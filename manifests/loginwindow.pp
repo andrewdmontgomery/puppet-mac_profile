@@ -16,6 +16,9 @@ class mac_profile::loginwindow (
   # PayloadDisplayName: `Login Window:  Screen Saver Preferences`
   $idle_time                    = 1200, # seconds
   $login_window_idle_time       = $idle_time,
+  $set_login_window_screen_saver  = false,
+  $login_window_screen_saver_path = '/System/Library/Screen Savers/FloatingMessage.saver',
+  $login_window_screen_saver_name = 'FloatingMessage'
 
   # PayloadDisplayName: `Login Window:  MCX Preferences`
   $guest_enabled                = false,

@@ -65,6 +65,12 @@
         <integer><%= @idle_time %></integer>
         <key>loginWindowIdleTime</key>
         <integer><%= @login_window_idle_time %></integer>
+        <% if @set_login_window_screen_saver %>
+        <key>loginWindowModulePath</key>
+        <string><%= @login_window_screen_saver_path %></string>
+        <key>moduleName</key>
+        <string><%= @login_window_screen_saver_name %></string>
+        <% end %>
       </dict>
       <dict>
         <key>DisableGuestAccount</key>
