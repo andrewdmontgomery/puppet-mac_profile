@@ -1,0 +1,33 @@
+{
+  "name": "puppet-mac_profile",
+  "author": "",
+  "license": "",
+  "version": "2.0.0",
+  "summary": "Puppet Module for managing macOS Configuration Profiles",
+  "source": "https://github.com/andrewdmontgomery/puppet-mac_profile",
+  "project_page": "https://github.com/andrewdmontgomery/puppet-mac_profile",
+  "issues_url": "https://github.com/andrewdmontgomery/puppet-mac_profile/issues",
+  "tags": [
+    "macOS",
+    "OS X",
+    "mobileconfig",
+    "profiles"
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Darwin"
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 4.4.0"
+    }
+  ],
+  "dependencies": [
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">= 2.3.1"
+    }
+  ]
+}
