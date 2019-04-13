@@ -1,30 +1,15 @@
 # manage common loginwindow settings
 class mac_profile::loginwindow (
   $ensure                 = 'present',
-  # PayloadDisplayName: `Login Window:  Global Preferences`
+  # PayloadDisplayName: `Login Window: Global Preferences`
   $fast_user_switching_enabled  = true,
   $auto_logout_delay            = 0,
 
-  # PayloadDisplayName: `LoginWindow`
-  $skip_appearance_setup        = false,
-  $skip_cloud_setup             = false,
-  $skip_privacy_setup           = false,
-  $skip_siri_setup              = false,
-  $skip_truetone_setup          = false,
-  $skip_iCloud_storage_setup    = false,
-
-  # PayloadDisplayName: `Login Window:  Screen Saver Preferences`
-  $idle_time                    = 1200, # seconds
-  $login_window_idle_time       = $idle_time,
-  $set_login_window_screen_saver  = false,
-  $login_window_screen_saver_path = '/System/Library/Screen Savers/FloatingMessage.saver',
-  $login_window_screen_saver_name = 'FloatingMessage'
-
-  # PayloadDisplayName: `Login Window:  MCX Preferences`
+  # PayloadDisplayName: `Login Window: MCX Preferences`
   $guest_enabled                = false,
   $guest_disbled                = !$guest_enabled,
 
-  # PayloadDisplayName: `Login Window` (with a space)
+  # PayloadDisplayName: `Login Window`
   ##$show_input_menu        = true,
   $show_fullname                = true,
   $hide_local_users             = true,
