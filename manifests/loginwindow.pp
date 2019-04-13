@@ -32,7 +32,7 @@ class mac_profile::loginwindow (
   $skip_login_hook              = false,
   $skip_logout_hook             = false,
 
-  # PayloadDisplayName: `Settings for Devices`
+  # PayloadDisplayName: `Login Window Settings`
   $payload_removal_disallowed   = false
 
 ) inherits mac_profile {

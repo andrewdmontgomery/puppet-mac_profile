@@ -12,7 +12,7 @@ class mac_profile::screen_saver (
   $login_window_module_path   = $screen_saver_path,
   $login_window_idle_time     = $idle_time,
 
-  # PayloadDisplayName: `Settings for Devices`
+  # PayloadDisplayName: `Screen Saver Settings`
   $payload_removal_disallowed   = false
 
 ) inherits mac_profile {
