@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>PayloadDisplayName</key>
+    <string>Setup Assistants</string>
+    <key>PayloadDescription</key>
+    <string>Configures setup assistants to be skipped during the first login after a macOS update.</string>
+    <key>PayloadOrganization</key>
+    <string><%= @profile_payload_org %></string>
+    <key>PayloadRemovalDisallowed</key>
+    <<%= @payload_removal_disallowed %>/>
+    <key>PayloadScope</key>
+    <string>System</string>
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadIdentifier</key>
+    <string><%= @profile_identifier_prefix %>.SetupAssistant</string>
+    <key>PayloadUUID</key>
+    <string>62007B81-274E-4AB1-8F31-330E5021F761</string>
+    <key>PayloadContent</key>
+    <array>
+      <dict>
+        <key>PayloadDisplayName</key>
+        <string>Skip Setup Assistants</string>
+        <key>PayloadEnabled</key>
+        <true/>
+        <key>PayloadIdentifier</key>
+        <string><%= @profile_identifier_prefix %>.SetupAssistant.managed</string>
+        <key>PayloadType</key>
+        <string>com.apple.SetupAssistant.managed</string>
+        <key>PayloadUUID</key>
+        <string>BB95C1A1-1C3B-4AD6-8094-4D7C55D42794</string>
+        <key>PayloadVersion</key>
+        <integer>1</integer>
+        <key>SkipAppearance</key>
+        <<%= @skip_appearance_setup %>/>
+        <key>SkipCloudSetup</key>
+        <<%= @skip_cloud_setup %>/>
+        <key>SkipPrivacySetup</key>
+        <<%= @skip_privacy_setup %>/>
+        <key>SkipSiriSetup</key>
+        <<%= @skip_siri_setup %>/>
+        <key>SkipTrueTone</key>
+        <<%= @skip_truetone_setup %>/>
+        <key>SkipiCloudStorageSetup</key>
+        <<%= @skip_iCloud_storage_setup %>/>
+        </dict>
+    </array>
+  </dict>
+</plist>
