@@ -15,7 +15,7 @@ class mac_profile::skip_setup (
 
 ) inherits mac_profile {
 
-  mac_profiles_handler::manage { "${profile_identifier_prefix}.skip_setup":
+  mac_profiles_handler::manage { "${::profile_identifier_prefix}.skip_setup":
     ensure      => $ensure,
     file_source => template('mac_profile/setup_assistant.mobileconfig.erb'),
     type        => 'template',

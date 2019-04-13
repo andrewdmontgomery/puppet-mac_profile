@@ -52,7 +52,7 @@ class mac_profile::loginwindow (
 
 ) inherits mac_profile {
 
-  mac_profiles_handler::manage { "${profile_identifier_prefix}.loginwindow":
+  mac_profiles_handler::manage { "${::profile_identifier_prefix}.loginwindow":
     ensure      => $ensure,
     file_source => template('mac_profile/loginwindow.mobileconfig.erb'),
     type        => 'template',
